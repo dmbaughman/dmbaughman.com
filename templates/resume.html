@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="container">	
+	<div id="resume-content">
+		
+	</div>
+</div> <!-- /container -->
+{% endblock body %}
+
+{% block bottom %}
+<script src="/js/handlebars-1.0.rc.1.js"></script>
+<script>
+	$(document).ready(function() {
+	 	
+	 	// Get the resume data, then make some pretty HTML using a Handlebars template
+	 	$.getJSON('/data/resume.json', function(data) {
+			// Get the handlebars template from the script below
+			var template = Handlebars.compile($("#resume-template").html());
+			// Set the context of the template to the "resume" object
+			var context = data["resume"];
+			// Get some HTML by processing the template with the given context
+			var html = template(context);
+			// Put that junk into the page!!
+			$('#resume-content').html(html);
+	 	});
+	 	
+	 	// Handlebars helper class for tags
+		Handlebars.registerHelper('tag', function(text) {
+			text = Handlebars.Utils.escapeExpression(text);
+			var result = "";
+			switch (text) {
+				case "Web Design":
+					result = 	'<span class="label label-info"> \
+									<i class="icon-white icon-globe"></i> \
+									</span>';
+					break;
+				case "Web Development":
+					result = 	'<span class="label label-success"> \
+									<i class="icon-white icon-wrench"></i> \
+									</span>';
+					break;
+				case "Responsive":
+					result = 	'<span class="label label-inverse"> \
+									<i class="icon-white icon-resize-full"></i> \
+									</span>';
+					break;
+				case "SharePoint":
+					result = 	'<span class="label label-warning"> \
+									<i class="icon-white icon-globe"></i> \
+									</span>';
+					break;
+				case "Usability":
+					result = 	'<span class="label label-important"> \
+									<i class="icon-white icon-user"></i> \
+									</span>';
+					break;
+				case "AJAX":
+					result = 	'<span class="label"> \
+									<i class="icon-white icon-refresh"></i> \
+									</span>';
+					break;
+			}
+			return new Handlebars.SafeString(result);
+		});	 	
+	});
+</script>
+
+<!--|---------------------------------------------
+	Handlebars JavaScript Template for resume data
+----------------------------------------------|-->
+<script id="resume-template" type="text/x-handlebars-template">
+{% raw %}
+	<h2 class="">Projects</h2>
+	<hr>
+	{{#each projects}}
+
+	<div class="row">
+		<div class="span4">
+			<div class="btn-group">
+			{{#each tags}}
+				{{#tag this}}{{/tag}}
+			{{/each}}
+			</div>
+		</div>
+		<div class="span8">
+			<h3>{{title}}</h3>
+			<p>{{description}}</p>
+		</div>
+	</div>
+	{{/each}} <!-- END Projects -->
+
+	
+	<h2>Contact</h2>
+	<hr>
+	{{#with contact}}
+			<span>{{email}}</li>
+			<li>{{phone}}</li>
+			<li>{{website}}</li>
+	{{/with}}
+{% endraw %}
+</script>
+{% endblock bottom %}

@@ -1,0 +1,6 @@
+title: Resume
+url: /resume.html
+type: resume
+tags: [_nav]
+nav_weight: 3
+---

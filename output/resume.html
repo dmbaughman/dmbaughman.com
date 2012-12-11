@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5-ck.js"></script>
+    <![endif]-->
+
+    <!-- Le favicon -->
+    <link rel="shortcut icon" href="/img/ico/favicon.ico">
+    
+    
+	<title>David Baughman | Resume</title>
+  </head>
+
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+			<div class="span4 hidden-phone">
+				<a href="/"><img class="logo" src="/img/dmbaughman-logo-small.png" alt="" /></a>
+			</div>
+			<a class="visible-phone pull-left" href="/"><img class="logo" src="/img/dmbaughman-logo-small.png" alt="" /></a>
+			<ul class="nav">
+	            <li><a href="/index.html">Home</a></li>
+	            <li><a href="/work.html">Work</a></li>
+	            <li class="active"><a href="/resume.html">Resume</a></li>
+	            <li><a href="/about.html">About</a></li>
+			</ul>
+		</div>
+      </div>
+    </div><!--/.navbar -->
+    
+<div class="container">	
+	<div id="resume-content">
+		
+	</div>
+</div> <!-- /container -->
+
+
+    <div id="footer">
+	    
+    </div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/js/scripts-ck.js"></script>
+    
+<script src="/js/handlebars-1.0.rc.1.js"></script>
+<script>
+	$(document).ready(function() {
+	 	
+	 	// Get the resume data, then make some pretty HTML using a Handlebars template
+	 	$.getJSON('/data/resume.json', function(data) {
+			// Get the handlebars template from the script below
+			var template = Handlebars.compile($("#resume-template").html());
+			// Set the context of the template to the "resume" object
+			var context = data["resume"];
+			// Get some HTML by processing the template with the given context
+			var html = template(context);
+			// Put that junk into the page!!
+			$('#resume-content').html(html);
+	 	});
+	 	
+	 	// Handlebars helper class for tags
+		Handlebars.registerHelper('tag', function(text) {
+			text = Handlebars.Utils.escapeExpression(text);
+			var result = "";
+			switch (text) {
+				case "Web Design":
+					result = 	'<span class="label label-info"> \
+									<i class="icon-white icon-globe"></i> \
+									</span>';
+					break;
+				case "Web Development":
+					result = 	'<span class="label label-success"> \
+									<i class="icon-white icon-wrench"></i> \
+									</span>';
+					break;
+				case "Responsive":
+					result = 	'<span class="label label-inverse"> \
+									<i class="icon-white icon-resize-full"></i> \
+									</span>';
+					break;
+				case "SharePoint":
+					result = 	'<span class="label label-warning"> \
+									<i class="icon-white icon-globe"></i> \
+									</span>';
+					break;
+				case "Usability":
+					result = 	'<span class="label label-important"> \
+									<i class="icon-white icon-user"></i> \
+									</span>';
+					break;
+				case "AJAX":
+					result = 	'<span class="label"> \
+									<i class="icon-white icon-refresh"></i> \
+									</span>';
+					break;
+			}
+			return new Handlebars.SafeString(result);
+		});	 	
+	});
+</script>
+
+<!--|---------------------------------------------
+	Handlebars JavaScript Template for resume data
+----------------------------------------------|-->
+<script id="resume-template" type="text/x-handlebars-template">
+
+	<h2 class="">Projects</h2>
+	<hr>
+	{{#each projects}}
+
+	<div class="row">
+		<div class="span4">
+			<div class="btn-group">
+			{{#each tags}}
+				{{#tag this}}{{/tag}}
+			{{/each}}
+			</div>
+		</div>
+		<div class="span8">
+			<h3>{{title}}</h3>
+			<p>{{description}}</p>
+		</div>
+	</div>
+	{{/each}} <!-- END Projects -->
+
+	
+	<h2>Contact</h2>
+	<hr>
+	{{#with contact}}
+			<span>{{email}}</li>
+			<li>{{phone}}</li>
+			<li>{{website}}</li>
+	{{/with}}
+
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,6 @@
+title: Home
+url: /index.html
+type: home
+tags: [_nav]
+nav_weight: 1
+---
