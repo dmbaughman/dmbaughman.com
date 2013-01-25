@@ -10,6 +10,11 @@
     <!-- Le styles -->
     <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/responsive.css" rel="stylesheet">
+    
+    <!-- Le Hawtness Web Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+
+    
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -24,28 +29,48 @@
   </head>
 
   <body>
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-			<div class="span4 hidden-phone">
-				<a href="/"><img class="logo" src="/img/dmbaughman-logo-small.png" alt="" /></a>
-			</div>
-			<a class="visible-phone pull-left" href="/"><img class="logo" src="/img/dmbaughman-logo-small.png" alt="" /></a>
-			<ul class="nav">
-	            <li><a href="/index.html">Home</a></li>
-	            <li class="active"><a href="/work.html">Work</a></li>
-	            <li><a href="/resume.html">Resume</a></li>
-	            <li><a href="/about.html">About</a></li>
-			</ul>
-		</div>
-      </div>
-    </div><!--/.navbar -->
-    
-<div class="container">
+    <div id="sidebar">
+    	<div id="brand">
+    		<a href="/" title="dmbaughman.com home">
+	    		<span class="logo"></span>
+    		</a>
+    	</div>
+		<ul id="nav-main" class="nav nav-list">
+	        <li>
+	        	<a href="/index.html">
+	        		<i class="visible-phone icon-white icon-home">&nbsp;</i>
+	        		<span class="hidden-phone">Home</span>
+	        	</a>
+	        </li>
+	        <li class="active">
+	        	<a href="/work.html">
+	        		<i class="visible-phone icon-white icon-wrench">&nbsp;</i>
+	        		<span class="hidden-phone">Work</span>
+	        	</a>
+	        </li>
+	        <li>
+	        	<a href="/resume.html">
+	        		<i class="visible-phone icon-white icon-list-alt">&nbsp;</i>
+	        		<span class="hidden-phone">Resume</span>
+	        	</a>
+	        </li>
+	        <li>
+	        	<a href="/about.html">
+	        		<i class="visible-phone icon-white icon-heart">&nbsp;</i>
+	        		<span class="hidden-phone">About</span>
+	        	</a>
+	        </li>
+		</ul>	   
+    </div><!--/#sidebar -->
+    <div id="main">
+	    
+<div class="container-fluid">
 	<h1>Work</h1>
 	<hr>
-	<div class="row">
-		<div class="offset4 span8">
+	<div class="row-fluid">
+		<div class="span4">
+		</div>
+		<div class="span8">
 			<p class="lead">I currently work for <a href="http://boeing.com" target="_blank">Boeing</a> near Seattle.  I'm the lead designer for Enterprise Search, and we've been able to do a lot of fun design work as part of the new search engine that my group is implementing.</p>
 			<p class="lead">I've just recently started doing freelance web design, which is way more fun.  It's so refreshing to work on projects where I'm not constrained by the lethargic environment of a large/old enterprise.</p>
 		</div>
@@ -54,7 +79,7 @@
 	<br>	
 	<h2>Designicity</h2>
 	<hr>
-	<div class="row">
+	<div class="row-fluid">
 		<div class="span4">
 			<p><b>Link</b>: <a href="http://designicity.com" target="_blank">http://designicity.com</a></p>
 			<p><b>Release Date</b>: October 23, 2012</p>
@@ -91,7 +116,7 @@
 	<p class="alert alert-info">The sites linked below are prototypes only, though they serve as samples of my web design/development skills.</p>	
 	<h2>Boeing // Search 3.3</h2>
 	<hr>
-	<div class="row">
+	<div class="row-fluid">
 		<div class="span4">
 			<p><b>Link</b>: <a href="http://search-3-3.dmbaughman.com" target="_blank">http://search-3-3.dmbaughman.com</a></p>
 			<p><b>Release Date</b>: July, 2012</p>
@@ -127,7 +152,7 @@
 	<br>	
 	<h2>Boeing // Search 3.1</h2>
 	<hr>
-	<div class="row">
+	<div class="row-fluid">
 		<div class="span4">
 			<p><b>Link</b>: <a href="http://search-3-1.dmbaughman.com" target="_blank">http://search-3-1.dmbaughman.com</a></p>
 			<p><b>Release Date</b>: N/A</p>
@@ -144,7 +169,7 @@
 	<br>
 	<h2>Boeing // Search 2.0</h2>
 	<hr>
-	<div class="row">
+	<div class="row-fluid">
 		<div class="span4">
 			<p><b>Link</b>: <a href="http://search-2.dmbaughman.com" target="_blank">http://search-2.dmbaughman.com</a></p>
 			<p><b>Release Date</b>: May 2011</p>
@@ -178,12 +203,17 @@
 	</div>
 
 
-</div> <!-- /container -->
+</div> <!-- /container-fluid -->
 
-
-    <div id="footer">
-	    
+	    <div id="footer">
+		    <div class="container-fluid">
+		    	<p>&copy; 2013 dmbaughman.  View source on Github.</p>
+		    </div>
+	    </div>
     </div>
+
+
+
 
     <!-- Le javascript
     ================================================== -->

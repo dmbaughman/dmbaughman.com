@@ -19,7 +19,7 @@
   clear: both;
 }
 .hide-text {
-  font: a;
+  font: 0/0 a;
   color: transparent;
   text-shadow: none;
   background-color: transparent;
@@ -533,5 +533,38 @@
   .nav-collapse.collapse {
     height: auto !important;
     overflow: visible !important;
+  }
+}
+@media (max-width: 767px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  #sidebar {
+    padding: 0;
+    width: 40px;
+  }
+  #sidebar .logo {
+    background-image: url('/img/logo-db-small.png');
+    height: 24px;
+    margin: 4px;
+    width: 32px;
+  }
+  #sidebar #nav-main {
+    margin-top: 10px;
+  }
+  #sidebar #nav-main li a {
+    padding-bottom: 12px;
+    padding-top: 12px;
+  }
+  #sidebar #nav-main li a i {
+    padding: 0;
+  }
+  #main,
+  #footer {
+    margin-left: 43px;
+  }
+  #main {
+    padding: 0 20px;
   }
 }

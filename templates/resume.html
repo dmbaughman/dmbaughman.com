@@ -1,9 +1,18 @@
 {% extends "base.html" %}
 
 {% block body %}
-<div class="container">	
+<div class="container-fluid">	
+	<h1>Resume</h1>
+	<hr>
+	<div class="row-fluid">
+		<div class="span4">
+		</div>
+		<div class="span8">
+			<p class="lead">This resume is a code-based representation of some of my web development skills.  Literally.  If you dig into the source code, you'll see that the contents of this page are dynamically generated using jQuery, AJAX, and <a href="http://handlebarsjs.com/" target="_blank">Handlebars.js</a>.</p>
+			<p class="lead">The fact that you're still reading means you want to know more, so I'll briefly explain.  I have a copy of my resume formatted as JSON, which is retrieved asynchronously using a simple AJAX call (jQuery's <code>$.getJSON()</code> method).  Once the AJAX request is complete, the Handlebars.js library is used to apply a template to format the data as HTML.</p>
+		</div>	
+	</div>
 	<div id="resume-content">
-		
 	</div>
 </div> <!-- /container -->
 {% endblock body %}
@@ -75,7 +84,7 @@
 	<hr>
 	{{#each projects}}
 
-	<div class="row">
+	<div class="row-fluid">
 		<div class="span4">
 			<div class="btn-group">
 			{{#each tags}}
@@ -93,11 +102,32 @@
 	
 	<h2>Contact</h2>
 	<hr>
-	{{#with contact}}
-			<span>{{email}}</li>
-			<li>{{phone}}</li>
-			<li>{{website}}</li>
-	{{/with}}
+	<div class="row-fluid">
+		<div class="span4">
+		</div>
+		{{#with contact}}
+			<ul class="unstyled span8">	
+				<li>
+					<i class="icon-envelope"></i>&nbsp;				
+					<a href="mailto:{{email}}">
+						{{email}}
+					</a>
+				</li>
+				<li>
+					<i class="icon-signal"></i>&nbsp;				
+					<a href="tel:{{phone}}">
+						{{phone}}
+					</a>
+				</li>
+				<li>
+					<i class="icon-globe"></i>&nbsp;				
+					<a href="{{website}}">
+						{{website}}
+					</a>
+				</li>
+			</ul>
+		{{/with}}
+	</div>
 {% endraw %}
 </script>
 {% endblock bottom %}

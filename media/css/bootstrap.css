@@ -116,7 +116,7 @@ textarea {
   clear: both;
 }
 .hide-text {
-  font: a;
+  font: 0/0 a;
   color: transparent;
   text-shadow: none;
   background-color: transparent;
@@ -140,11 +140,11 @@ body {
   background-color: #ffffff;
 }
 a {
-  color: #0088cc;
+  color: #0096db;
   text-decoration: none;
 }
 a:hover {
-  color: #005580;
+  color: #00628f;
   text-decoration: underline;
 }
 .row {
@@ -364,7 +364,7 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-family: inherit;
+  font-family: 'Raleway', "Helvetica Neue Light", Arial, sans-serif;
   font-weight: bold;
   color: inherit;
   text-rendering: optimizelegibility;
@@ -2002,7 +2002,7 @@ table .span24 {
 .dropdown-menu .active > a:hover {
   color: #ffffff;
   text-decoration: none;
-  background-color: #0088cc;
+  background-color: #0096db;
 }
 .open {
   *z-index: 1000;
@@ -2259,18 +2259,18 @@ button.close {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 }
 .btn-primary {
-  background-color: #0074cc;
-  background-image: -moz-linear-gradient(top, #0088cc, #0055cc);
-  background-image: -ms-linear-gradient(top, #0088cc, #0055cc);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0055cc));
-  background-image: -webkit-linear-gradient(top, #0088cc, #0055cc);
-  background-image: -o-linear-gradient(top, #0088cc, #0055cc);
-  background-image: linear-gradient(top, #0088cc, #0055cc);
+  background-color: #0080db;
+  background-image: -moz-linear-gradient(top, #0096db, #005fdb);
+  background-image: -ms-linear-gradient(top, #0096db, #005fdb);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0096db), to(#005fdb));
+  background-image: -webkit-linear-gradient(top, #0096db, #005fdb);
+  background-image: -o-linear-gradient(top, #0096db, #005fdb);
+  background-image: linear-gradient(top, #0096db, #005fdb);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0055cc', GradientType=0);
-  border-color: #0055cc #0055cc #003580;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0096db', endColorstr='#005fdb', GradientType=0);
+  border-color: #005fdb #005fdb #003e8f;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #0055cc;
+  *background-color: #005fdb;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
 
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
@@ -2280,12 +2280,12 @@ button.close {
 .btn-primary.active,
 .btn-primary.disabled,
 .btn-primary[disabled] {
-  background-color: #0055cc;
-  *background-color: #004ab3;
+  background-color: #005fdb;
+  *background-color: #0054c2;
 }
 .btn-primary:active,
 .btn-primary.active {
-  background-color: #004099 \9;
+  background-color: #0049a8 \9;
 }
 .btn-warning {
   background-color: #faa732;
@@ -2572,7 +2572,7 @@ input[type="submit"].btn.btn-mini {
   background-color: #e6e6e6;
 }
 .btn-group.open .btn-primary.dropdown-toggle {
-  background-color: #0055cc;
+  background-color: #005fdb;
 }
 .btn-group.open .btn-warning.dropdown-toggle {
   background-color: #f89406;
@@ -2682,7 +2682,7 @@ input[type="submit"].btn.btn-mini {
 }
 .nav > li > a:hover {
   text-decoration: none;
-  background-color: #eeeeee;
+  background-color: #00628f;
 }
 .nav > .pull-right {
   float: right;
@@ -2718,7 +2718,7 @@ input[type="submit"].btn.btn-mini {
 .nav-list > .active > a:hover {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-  background-color: #0088cc;
+  background-color: #0096db;
 }
 .nav-list [class^="icon-"] {
   margin-right: 2px;
@@ -2796,7 +2796,7 @@ input[type="submit"].btn.btn-mini {
 .nav-pills > .active > a,
 .nav-pills > .active > a:hover {
   color: #ffffff;
-  background-color: #0088cc;
+  background-color: #0096db;
 }
 .nav-stacked > li {
   float: none;
@@ -2845,14 +2845,14 @@ input[type="submit"].btn.btn-mini {
 }
 .nav-tabs .dropdown-toggle .caret,
 .nav-pills .dropdown-toggle .caret {
-  border-top-color: #0088cc;
-  border-bottom-color: #0088cc;
+  border-top-color: #0096db;
+  border-bottom-color: #0096db;
   margin-top: 6px;
 }
 .nav-tabs .dropdown-toggle:hover .caret,
 .nav-pills .dropdown-toggle:hover .caret {
-  border-top-color: #005580;
-  border-bottom-color: #005580;
+  border-top-color: #00628f;
+  border-bottom-color: #00628f;
 }
 .nav-tabs .active .dropdown-toggle .caret,
 .nav-pills .active .dropdown-toggle .caret {
@@ -3776,7 +3776,7 @@ input[type="submit"].btn.btn-mini {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 a.thumbnail:hover {
-  border-color: #0088cc;
+  border-color: #0096db;
   -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
@@ -4233,11 +4233,86 @@ a.badge:hover {
 .invisible {
   visibility: hidden;
 }
-body {
-  padding: 60px 0 40px;
-  /* padding for fixed top and bottom bars */
-
+#sidebar {
+  background: #222222;
+  border-right: 5px solid #0096db;
+  height: 100%;
+  padding: 0;
+  position: fixed;
+  width: 205px;
 }
-.logo {
-  padding: 0 20px;
+#sidebar .logo {
+  background: url('/img/logo-db.png') no-repeat 0 0;
+  display: inline-block;
+  margin: 20px;
+  height: 61px;
+  width: 80px;
+}
+#sidebar #nav-main {
+  font-family: 'Raleway', "Helvetica Neue Light", Arial, sans-serif;
+  font-size: 15.6px;
+  font-weight: 100 !important;
+}
+#sidebar #nav-main li {
+  line-height: 21.599999999999998px;
+}
+#sidebar #nav-main li a {
+  color: #eeeeee;
+  padding-bottom: 5px;
+  padding-top: 10px;
+  text-shadow: none;
+  -webkit-transition: 0.2s color ease;
+  -moz-transition: 0.2s color ease;
+  -ms-transition: 0.2s color ease;
+  -o-transition: 0.2s color ease;
+  transition: 0.2s color ease;
+}
+#sidebar #nav-main li a:hover {
+  text-decoration: none;
+  text-shadow: none;
+}
+#sidebar #nav-main li.active {
+  background: #0096db;
+}
+#sidebar #nav-main li.active a {
+  color: #fff;
+}
+#main {
+  background: #ffffff;
+  margin-left: 210px;
+  max-width: 960px;
+}
+#main .container-fluid {
+  padding-top: 40px;
+}
+#homepage-hero {
+  background: url('../img/homepage-office.png') no-repeat 0 0;
+  background-size: cover;
+  overflow: hidden;
+}
+#homepage-hero #hero-text {
+  background: #0096db;
+  -webkit-border-radius: 0 20px;
+  -moz-border-radius: 0 20px;
+  border-radius: 0 20px;
+  float: right;
+  margin: 90px 45px;
+  opacity: .95;
+  padding: 75px 35px;
+  text-align: right;
+}
+#homepage-hero #hero-text h1 {
+  color: #ffffff;
+}
+#homepage-hero #hero-text h2 {
+  color: #002144;
+}
+h1 {
+  color: #0096db;
+}
+.lt-ie8 #sidebar {
+  position: static;
+}
+.lt-ie8 #main {
+  margin-left: 0;
 }

@@ -2,5 +2,6 @@ title: About
 url: /about.html
 type: about
 tags: [_nav]
+icon: icon-heart
 nav_weight: 4
 ---
