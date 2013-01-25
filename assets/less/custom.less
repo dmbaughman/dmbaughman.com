@@ -1,0 +1,111 @@
+// --------------------------------------------------
+// Custom Stylez
+// --------------------------------------------------
+
+
+// Main Layout Stuffs
+// --------------------------------------------------
+
+#sidebar {
+	background: @grayDarker;
+	border-right: 5px solid @linkColor;
+	height: 100%;
+	//opacity: .7;
+	padding: 0;
+	position: fixed;
+	width: 205px;
+	.logo {
+		background: url('/img/logo-db.png') no-repeat 0 0;
+		display: inline-block;
+		margin: 20px;
+		height: 61px;
+		width: 80px;
+	}
+	#nav-main {
+		font-family: @lightFontFamily;
+		font-size: @baseFontSize * 1.2;
+		font-weight: 100 !important;
+		li {
+			line-height: @baseLineHeight * 1.2;
+			//margin-bottom: 5px;
+			//padding: 5px 0 5px 20px;
+			a {
+				color: @grayLighter;
+				padding-bottom: 5px;
+				padding-top: 10px;
+				text-shadow: none;
+				.transition(.2s color ease);
+				&:hover {
+					//color: @grayLighter !important;
+					text-decoration: none;
+					text-shadow: none;
+				}
+			}
+			
+		}
+		li.active {
+			background: @linkColor;
+			a {
+				color: #fff;
+			}
+		}
+	}
+}
+
+#main {
+	background: @white;
+	margin-left: 210px;
+	max-width: 960px;
+	.container-fluid {
+		padding-top: 40px;	
+	}
+}
+
+
+// Homepage stuffs
+// --------------------------------------------------
+
+#homepage-hero {
+	background: url('../img/homepage-office.png') no-repeat 0 0;
+	background-size: cover;
+	overflow: hidden;
+	//display: block;
+	//position: absolute;
+	#hero-text {
+		background: @blueBright;
+		.border-radius(0 20px);
+		float: right;
+		margin: 90px 45px;
+		opacity: .95;
+		padding: 75px 35px;
+		text-align: right;
+		//width: 30%;	
+		h1 {
+			color: @white;
+		}
+		h2 {
+			color: @blueDarker;
+		}
+	}
+}
+
+// General over-ride styles
+// --------------------------------------------------
+h1 {
+	color: @linkColor;
+}
+
+// Internet Explorer Fixes
+// --------------------------------------------------
+
+
+// IE <8 Fixes
+
+.lt-ie8 {	
+	#sidebar {
+		position: static;
+	}
+	#main {
+		margin-left: 0;
+	}
+}

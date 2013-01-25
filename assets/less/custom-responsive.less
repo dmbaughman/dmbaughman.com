@@ -1,0 +1,39 @@
+// CUSTOM RESPONSIVE STYLES
+// ---------
+
+@media (max-width: 767px) {
+	body {
+		margin: 0;
+		padding: 0;
+	}
+	#sidebar {
+		.logo {
+			background-image: url('/img/logo-db-small.png');
+			height: 24px;
+			margin: 4px;
+			width: 32px;
+		}
+		padding: 0;
+		width: 40px;
+		#nav-main {
+			margin-top: 10px;
+			li {
+				//display: block;
+				a {
+					padding-bottom: 12px;
+					padding-top: 12px;
+					i {
+						padding: 0;									
+					}
+
+				}
+			}
+		}	
+	}
+	#main, #footer {
+		margin-left: 43px; // 40px for width, plus 3px for border		
+	}
+	#main {
+		padding:0 20px;
+	}
+}
