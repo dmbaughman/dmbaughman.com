@@ -28,7 +28,7 @@
 			<p>A special thanks to <a href="http://robmd.net/">Rob McGuire-Dale</a> for referring me to Wok, and helping me learn how to use it effectively.</p>
 		</div>
 		<div class="span8">
-			<div id="carousel2" class="carousel slide">
+			<div id="carousel-designicity" class="carousel slide">
 				<!-- Carousel items -->
 				<div class="carousel-inner">
 					<div class="active item">
@@ -42,8 +42,8 @@
 					</div>
 				</div>
 				<!-- Carousel nav -->
-				<a class="carousel-control left" href="#carousel2" data-slide="prev">&lsaquo;</a>
-				<a class="carousel-control right" href="#carousel2" data-slide="next">&rsaquo;</a>
+				<a class="carousel-control left" href="#carousel-designicity" data-slide="prev">&lsaquo;</a>
+				<a class="carousel-control right" href="#carousel-designicity" data-slide="next">&rsaquo;</a>
 			</div>
 		</div>
 	</div>	
@@ -63,7 +63,7 @@
 			<p>The reference materials on the previous site had way too much information and were rarely used, so I reduced those materials to 4 pages.  Each of these pages has a clean sub-navigation to quickly jump to the high-level topic of interest for more details.</p>
 		</div>
 		<div class="span8">
-			<div id="carousel2" class="carousel slide">
+			<div id="carousel-search-3" class="carousel slide">
 				<!-- Carousel items -->
 				<div class="carousel-inner">
 					<div class="active item">
@@ -80,8 +80,8 @@
 					</div>					
 				</div>
 				<!-- Carousel nav -->
-				<a class="carousel-control left" href="#carousel2" data-slide="prev">&lsaquo;</a>
-				<a class="carousel-control right" href="#carousel2" data-slide="next">&rsaquo;</a>
+				<a class="carousel-control left" href="#carousel-search-3" data-slide="prev">&lsaquo;</a>
+				<a class="carousel-control right" href="#carousel-search-3" data-slide="next">&rsaquo;</a>
 			</div>
 		</div>
 	</div>	
@@ -116,7 +116,7 @@
 			<p>The previous landing page was completely different from the rest of the site, so it was unclear that it was even the same site.  This design is simple, and was aimed at creating a more unified web presence for Enterprise Search.</p>
 		</div>
 		<div class="span8">
-			<div id="carousel1" class="carousel slide">
+			<div id="carousel-search-2" class="carousel slide">
 				<!-- Carousel items -->
 				<div class="carousel-inner">
 					<div class="active item">
@@ -133,8 +133,8 @@
 					</div>					
 				</div>
 				<!-- Carousel nav -->
-				<a class="carousel-control left" href="#carousel1" data-slide="prev">&lsaquo;</a>
-				<a class="carousel-control right" href="#carousel1" data-slide="next">&rsaquo;</a>
+				<a class="carousel-control left" href="#carousel-search-2" data-slide="prev">&lsaquo;</a>
+				<a class="carousel-control right" href="#carousel-search-2" data-slide="next">&rsaquo;</a>
 			</div>
 		</div>
 	</div>
@@ -142,3 +142,9 @@
 
 </div> <!-- /container-fluid -->
 {% endblock body %}
+
+{% block bottom %}
+<script>
+	$('.carousel').carousel();
+</script>
+{% endblock bottom %}

@@ -4307,7 +4307,9 @@ a.badge:hover {
 #homepage-hero #hero-text h2 {
   color: #002144;
 }
-h1 {
+h1,
+h3,
+h5 {
   color: #0096db;
 }
 .lt-ie8 #sidebar {
