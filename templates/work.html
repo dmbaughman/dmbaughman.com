@@ -8,8 +8,8 @@
 		<div class="span4">
 		</div>
 		<div class="span8">
-			<p class="lead">I currently work for <a href="http://boeing.com">Boeing</a> near Seattle.  I'm the lead designer for Enterprise Search, and we've been able to do a lot of fun design work as part of the new search engine that my group is implementing.</p>
-			<p class="lead">I've just recently started doing freelance web design, which is way more fun.  It's so refreshing to work on projects where I'm not constrained by the lethargic environment of a large/old enterprise.</p>
+			<p class="lead">I currently work for <a href="http://paywithisis.com">Isis</a> in Seattle.  I'm the front-end developer (they call me "the web guy") on the marketing team, and have had a great opportunity to use some of the newest tools available for front-end development.</p>
+			<p class="lead">Prior to coming to Isis, I worked at <a href="http://boeing.com">Boeing</a> for 5 years as a designer/developer on their Enterprise Search team and dabbled a little in freelance web design and development.</p>
 		</div>
 	</div>
 	{% for subpage in site.categories['work']|sort(attribute='datetime', reverse=True) %}
@@ -77,8 +77,8 @@
 							{% endfor %}
 						</div>
 						<!-- Carousel nav -->
-						<a class="carousel-control left" href="#carousel-{{ subpage.title }}" data-slide="prev">&lsaquo;</a>
-						<a class="carousel-control right" href="#carousel-{{ subpage.title }}" data-slide="next">&rsaquo;</a>
+						<!--a class="carousel-control left" href="#carousel-{{ subpage.title }}" data-slide="prev">&lsaquo;</a>
+						<a class="carousel-control right" href="#carousel-{{ subpage.title }}" data-slide="next">&rsaquo;</a-->
 					</div><!-- /.carousel -->
 				{% else %}
 					<img src="/img/{{ subpage.image }}" alt="Screenshot from the {{ subpage.title }} website" />
