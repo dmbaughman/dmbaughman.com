@@ -1,7 +1,0 @@
-title: Work
-url: /work.html
-type: work
-tags: [_nav]
-nav_weight: 2
-icon: icon-wrench
----
