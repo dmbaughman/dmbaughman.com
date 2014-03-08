@@ -12,6 +12,10 @@ angular.module('dmbaughmancomApp', [
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/work', {
+        templateUrl: 'views/work.html',
+        controller: 'WorkCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

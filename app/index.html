@@ -25,6 +25,17 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
+
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li><a ng-href="/#/">Home</a></li>
+          <li><a ng-href="/#/work">Work</a></li>
+        </ul>
+        <h3 class="text-muted">dmbaughman com</h3>
+      </div>
+    </div>
+
     <div class="container" ng-view=""></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -58,6 +69,7 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/work.js"></script>
         <!-- endbuild -->
 </body>
 </html>
