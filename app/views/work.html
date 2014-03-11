@@ -4,7 +4,18 @@
 
 <div ng-repeat="project in projects">
   <h2 class="page-header">{{project.name}}</h2>
-
-  <img class="img-responsive" src="images/{{project.image}}" alt="">
+  <div class="row">
+    <div class="col-sm-4">
+      <p><strong>URL</strong>: <a href="{{project.url}}">{{project.url}}</a></p>
+      <p><strong>Release Date</strong>: {{project.date}}</p>
+      <p><strong>Status</strong>: {{project.status}}</p>
+      <p><strong>Tools</strong>: <span ng-repeat="tool in project.tools">{{tool}}, </span></p>
+      <p ng-if="project.source"><strong>Source</strong>: <a href="{{project.source}}">{{project.source}}</a></p>
+      <p>{{project.description}}</p>
+    </div>
+    <div class="col-sm-8">
+      <img class="img-responsive" src="images/{{project.image}}" alt="">
+    </div>
+  </div>
 
 </div>

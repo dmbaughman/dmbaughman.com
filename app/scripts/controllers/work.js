@@ -5,9 +5,9 @@ angular.module('dmbaughmancomApp')
 	$http({
 		method: 'GET',
 		url: 'data/work.json',
-	}).success(function(data, status) {
+	}).success(function(data) {
 		$scope.projects = data.projects;
-		console.log(status);
+		//console.log(status);
 	}).error(function(data, status){
 		console.log(data, status);
 	});
