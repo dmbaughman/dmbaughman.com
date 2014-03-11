@@ -18,12 +18,11 @@
       </div>
       <div class="col-sm-8">
         <!--img class="img-responsive" src="images/{{project.image}}" alt=""-->
-          <carousel interval="5000">
+          <carousel>
             <slide ng-repeat="image in project.images" active="slide.active">
               <img ng-src="images/{{image}}" class="center-block">
             </slide>
           </carousel>
-
       </div>
     </div>
 
