@@ -4,7 +4,8 @@ angular.module('dmbaughmancomApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  'ui.bootstrap'
 ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -20,3 +21,5 @@ angular.module('dmbaughmancomApp', [
         redirectTo: '/'
       });
   });
+
+//angular.module('myModule', ['ui.bootstrap']);

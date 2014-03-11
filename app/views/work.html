@@ -1,21 +1,31 @@
-<h1>Work</h1>
-<p class="lead">I currently work for Isis in Seattle. I'm the front-end developer (they call me "the web guy") on the marketing team, and have had a great opportunity to use some of the newest tools available for front-end development.</p>
-<p class="lead">Prior to coming to Isis, I worked at Boeing for 5 years as a designer/developer on their Enterprise Search team and dabbled a little in freelance web design and development.</p>
+<section>
+  <h1>Work</h1>
+  <p class="lead">I currently work for Isis in Seattle. I'm the front-end developer (they call me "the web guy") on the marketing team, and have had a great opportunity to use some of the newest tools available for front-end development.</p>
+  <p class="lead">Prior to coming to Isis, I worked at Boeing for 5 years as a designer/developer on their Enterprise Search team and dabbled a little in freelance web design and development.</p>
+</section>
 
-<div ng-repeat="project in projects">
-  <h2 class="page-header">{{project.name}}</h2>
-  <div class="row">
-    <div class="col-sm-4">
-      <p><strong>URL</strong>: <a href="{{project.url}}">{{project.url}}</a></p>
-      <p><strong>Release Date</strong>: {{project.date}}</p>
-      <p><strong>Status</strong>: {{project.status}}</p>
-      <p><strong>Tools</strong>: <span ng-repeat="tool in project.tools">{{tool}}, </span></p>
-      <p ng-if="project.source"><strong>Source</strong>: <a href="{{project.source}}">{{project.source}}</a></p>
-      <p>{{project.description}}</p>
-    </div>
-    <div class="col-sm-8">
-      <img class="img-responsive" src="images/{{project.image}}" alt="">
-    </div>
-  </div>
+<section>
+  <article ng-repeat="project in projects">
+    <h2 class="page-header">{{project.name}}</h2>
+    <div class="row">
+      <div class="col-sm-4">
+        <p><strong>URL</strong>: <a href="{{project.url}}">{{project.url}}</a></p>
+        <p><strong>Release Date</strong>: {{project.date}}</p>
+        <p><strong>Status</strong>: {{project.status}}</p>
+        <p><strong>Tools</strong>: <span ng-repeat="tool in project.tools">{{tool}}, </span></p>
+        <p ng-if="project.source"><strong>Source</strong>: <a href="{{project.source}}">{{project.source}}</a></p>
+        <p>{{project.description}}</p>
+      </div>
+      <div class="col-sm-8">
+        <!--img class="img-responsive" src="images/{{project.image}}" alt=""-->
+          <carousel interval="5000">
+            <slide ng-repeat="image in project.images" active="slide.active">
+              <img ng-src="images/{{image}}" class="center-block">
+            </slide>
+          </carousel>
 
-</div>
+      </div>
+    </div>
+
+  </article>
+</section>
