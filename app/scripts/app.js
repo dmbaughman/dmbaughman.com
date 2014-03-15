@@ -5,11 +5,11 @@ angular.module('dmbaughmancomApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'ui.bootstrap'
+  'mgcrea.ngStrap'
 ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
+      .when('/home', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
@@ -18,7 +18,7 @@ angular.module('dmbaughmancomApp', [
         controller: 'WorkCtrl'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/home'
       });
   });
 

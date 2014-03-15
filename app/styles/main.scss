@@ -2,3 +2,25 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 @import '_variables.scss';
 @import 'sass-bootstrap/lib/bootstrap';
+
+body {
+    //padding-top: $navbar-height;
+}
+
+.masthead {
+    min-height: 600px;
+    padding-top: $navbar-height;
+}
+
+.home {
+    .masthead {
+        background: url('http://cdn.elegantthemes.com/preview/Vertex/wp-content/uploads/2013/06/header10.jpg') center center no-repeat;
+        background-size: cover;
+    }
+}
+
+.work {
+    .masthead {
+        background: $gray;
+    }
+}

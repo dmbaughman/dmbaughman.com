@@ -9,11 +9,13 @@
 // Grays
 // -------------------------
 
-$gray-darker:            lighten(#000, 13.5%) !default; // #222
+$gray-darker:            #25383b;
 $gray-dark:              lighten(#000, 20%) !default;   // #333
 $gray:                   lighten(#000, 33.5%) !default; // #555
 $gray-light:             lighten(#000, 60%) !default;   // #999
 $gray-lighter:           lighten(#000, 93.5%) !default; // #eee
+$gray-lightest:          lighten(#000, 97%) !default;   // #whoknows
+$white:                  #fff;
 
 // Brand colors
 // -------------------------
@@ -27,7 +29,7 @@ $brand-info:            #5bc0de !default;
 // Scaffolding
 // -------------------------
 
-$body-bg:               #fff !default;
+$body-bg:               $white !default;
 $text-color:            $gray-dark !default;
 
 // Links
@@ -46,7 +48,7 @@ $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace !default;
 $font-family-base:        $font-family-sans-serif !default;
 
-$font-size-base:          15px !default;
+$font-size-base:          18px !default;
 $font-size-large:         ceil($font-size-base * 1.25) !default; // ~18px
 $font-size-small:         ceil($font-size-base * 0.85) !default; // ~12px
 
@@ -256,7 +258,7 @@ $grid-float-breakpoint:     $screen-sm-min !default;
 // -------------------------
 
 // Basics of a navbar
-$navbar-height:                    50px !default;
+$navbar-height:                    60px !default;
 $navbar-margin-bottom:             $line-height-computed !default;
 $navbar-border-radius:             $border-radius-base !default;
 $navbar-padding-horizontal:        floor($grid-gutter-width / 2) !default;
@@ -290,7 +292,7 @@ $navbar-default-toggle-border-color:       #ddd !default;
 //
 // Reset inverted navbar basics
 $navbar-inverse-color:                      $gray-light !default;
-$navbar-inverse-bg:                         #222 !default;
+$navbar-inverse-bg:                         $gray-darker !default;
 $navbar-inverse-border:                     darken($navbar-inverse-bg, 10%) !default;
 
 // Inverted navbar links
