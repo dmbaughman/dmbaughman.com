@@ -1,0 +1,20 @@
+$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
+
+@import '_variables.scss';
+@import 'sass-bootstrap/lib/bootstrap';
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+section {
+    > header, > .container {
+        min-height: 600px;
+    }
+    > header {
+        background: $gray-dark;
+    }
+}
