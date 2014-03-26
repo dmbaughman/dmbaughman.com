@@ -1,3 +1,6 @@
+/* jshint devel:true */
+/* global Handlebars */
+
 // Model
 var Site = Site || {};
 
@@ -18,6 +21,8 @@ Site.Model = function( view ) {
 			beforeSend: view.displayLoading,
 			success:    function( job, status, xhr ) {
 				console.log( 'Success!', job );
+				console.log( 'Status: ', status );
+				console.log( 'xhr stuff: ', xhr );
 
 				self._job = job;
 				self._updateView();
