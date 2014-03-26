@@ -10,7 +10,8 @@
 // -------------------------
 
 $gray-darker:            lighten(#000, 13.5%) !default; // #222
-$gray-dark:              lighten(#000, 20%) !default;   // #333
+//$gray-dark:              lighten(#000, 20%) !default;   // #333
+$gray-dark:				 #565157 !default;
 $gray:                   lighten(#000, 33.5%) !default; // #555
 $gray-light:             lighten(#000, 60%) !default;   // #999
 $gray-lighter:           lighten(#000, 93.5%) !default; // #eee
@@ -18,11 +19,12 @@ $gray-lighter:           lighten(#000, 93.5%) !default; // #eee
 // Brand colors
 // -------------------------
 
-$brand-primary:         #428bca !default;
+$brand-primary:         #10CFC8 !default;
 $brand-success:         #5cb85c !default;
-$brand-warning:         #f0ad4e !default;
-$brand-danger:          #d9534f !default;
+$brand-warning:         #F5D662 !default;
+$brand-danger:          #F53C4A !default;
 $brand-info:            #5bc0de !default;
+$brand-white:           #F2EEE7 !default;
 
 // Scaffolding
 // -------------------------

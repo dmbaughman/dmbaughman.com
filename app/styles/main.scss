@@ -18,3 +18,7 @@ section {
         background: $gray-dark;
     }
 }
+
+.navbar .active a[href="#home"] {
+    //color: #f00;
+}
