@@ -1,0 +1,59 @@
+{
+	"projects": [
+		{
+			"name": "Isis",
+			"url": "http://paywithisis.com",
+			"date": "2013-11-04",
+			"status": "Production",
+			"tools": ["Hyde", "Bootstrap 3","GruntJS","HandlebarsJS","jQuery"],
+			"source": "https://github.com/dmbaughman/pwi",
+			"description": "This is the consumer-facing website I built while at Isis. Its main function is to introduce the product (a mobile wallet) and help users know how to get started with the app (which has quite a few prerequisite requirements). I built my local dev environment using Hyde (a Python clone of Jekyll) and the UI framework is none other than the latest and greatest version of Bootstrap 3. I also began using Grunt (NodeJS) to manage my build process, which is amazingly awesome at what it does. I can't take complete credit for the homepage design, which was largely done by a member of Isis' product design team, but I took the design he came up with for the homepage, made a few tweaks, and then used it to create a pattern to follow for the rest of the pages on the site.",
+			"image": "paywithisis-responsive.jpg",
+			"images": ["paywithisis-home.jpeg","paywithisis-responsive.jpg","paywithisis-get-started.jpeg","paywithisis-learn.jpeg","paywithisis-help.jpeg"]
+		},
+		{
+			"name": "Designicity",
+			"url": "http://designicity.com",
+			"date": "2012-10-23",
+			"status": "Production",
+			"tools": ["Wok","Bootstrap","MasonryJS","jQuery.BlackAndWhite","jQuery"],
+			"source": "https://github.com/dmbaughman/designicity",
+			"description": "This is my first real freelance project for a friend I grew up with. She's an interior designer in New York, and this site is designed as a quasi-blog which she uses to promote products she sells for other companies. The core of the site (especially the blog) uses Wok, a Python-based static HTML generator similar to Hyde. Wok uses a combination of Jinja2 templates for generating the page structure, and Markdown for page content. The base CSS is built using a customized version of Bootstrap. A special thanks to Rob McGuire-Dale for referring me to Wok, and helping me learn how to use it effectively.",
+			"image": "designicity-home.png",
+			"images": ["designicity-home.png","designicity-blog.png","designicity-modal.png"]
+		},
+		{
+			"name": "Search 3.3",
+			"url": "http://search-3.3.dmbaughman.com",
+			"date": "2012-07-16",
+			"status": "Retired",
+			"tools": ["HTML5","CSS3","jQuery","Responsive","ASP.NET","SharePoint","XSLT"],
+			"source": "",
+			"description": "Search 3.3 improved on the visual design of Search 3.1. Instead of using the homepage almost exclusively as marketing space, I decided to put whitespace around the search box so that functionality retained its precedence on the site. The reference materials on the previous site had way too much information and were rarely used, so I reduced those materials to 4 pages. Each of these pages has a clean sub-navigation to quickly jump to the high-level topic of interest for more details.",
+			"image": "search_3.3_1.png",
+			"images": ["search_3.3_1.png","search_3.3_2.png","search_3.3_3.png","search_3.3_4.png"]
+		},
+		{
+			"name": "Search 3.1",
+			"url": "http://search-3.1.dmbaughman.com",
+			"date": "2012-03-14",
+			"status": "Prototype Only",
+			"tools": ["HTML5","CSS3","jQuery","Responsive"],
+			"source": "",
+			"description": "Search 3.1 was intended as the front-end for our new search engine, but it took so long for our infrastructure to be put in place that I ended up re-designing it before it could be implemented. This was the first responsive design that I will claim ownership for (search 3.0 was a hodgepodge of experiments in responsive/adaptive layout). I designed the homepage (shown) to be like a marketing site for our service, with the idea of showcasing the improvements we were making to Search.",
+			"image": "search_3.1_responsive.png",
+			"images": ["search_3.1_responsive.png"]
+		},
+		{
+			"name": "Search 2.0",
+			"url": "http://search-2.dmbaughman.com",
+			"date": "2011-05-21",
+			"status": "Retired",
+			"tools": ["HTML5","CSS3","jQuery"],
+			"source": "",
+			"description": "Search 2.0 was the first re-design I did for Enterprise Search a few months after joining the group. Prior to this, the search landing page our user/developer reference materials were completely separate, so it was difficult for users to get self-help on everyday topics. The previous landing page was completely different from the rest of the site, so it was unclear that it was even the same site. This design is simple, and was aimed at creating a more unified web presence for Enterprise Search.",
+			"image": "search_2.0_1.png",
+			"images": ["search_2.0_1.png","search_2.0_2.png","search_2.0_3.png","search_2.0_4.png"]
+		}
+	]
+}
