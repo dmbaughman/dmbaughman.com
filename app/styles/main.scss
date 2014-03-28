@@ -11,11 +11,20 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 }
 
 section {
-    > header, > .container {
-        min-height: 600px;
-    }
     > header {
         background: $gray-dark;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 600px;
+    }
+    &#home {
+        > header {
+            background-image: url('http://cdn.electricstudio.co.uk/wpcms/wp-content/uploads/2013/11/hipster-desk-photo.jpg');
+        }
+    }
+    > .container {
+        padding: $grid-gutter-width 0;
     }
 }
 

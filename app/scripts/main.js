@@ -5,26 +5,25 @@
 var Site = Site || {};
 
 Site.Model = function( view ) {
-	'use strict';
 	var self = {};
 
 	var $ = jQuery;
 
 	// Data
 	// ====
-	self._job = null;
+	self._jobs = null;
 
-	self.fetchJob = function( contentUrl ) {
+	self.fetchJobs = function( contentUrl ) {
 		$.ajax({
 			url:         contentUrl,
 			dataType:    'json',
 			beforeSend: view.displayLoading,
-			success:    function( job, status, xhr ) {
-				console.log( 'Success!', job );
+			success:    function( jobs, status, xhr ) {
+				console.log( 'Success!', jobs );
 				console.log( 'Status: ', status );
 				console.log( 'xhr stuff: ', xhr );
 
-				self._job = job;
+				self._jobs = jobs;
 				self._updateView();
 			},
 			error:      function( xhr, status, error ) {
@@ -34,7 +33,7 @@ Site.Model = function( view ) {
 	};
 
 	self._updateView = function() {
-		view.displayJob( self._job );
+		view.displayJobs( self._jobs );
 	};
 
 	return self;
@@ -45,7 +44,6 @@ Site.Model = function( view ) {
 var Site = Site || {};
 
 Site.View = function( contentSelector ) {
-	'use strict';
 	var self = {};
 
 	// Imports
@@ -65,9 +63,9 @@ Site.View = function( contentSelector ) {
 		template   = hb.compile( source );
 	};
 
-	self.displayJob = function( job ) {
+	self.displayJobs = function( jobs ) {
 		if( template ) {
-			$( contentSelector ).html( template( job ) );
+			$( contentSelector ).html( template( jobs ) );
 		}
 	};
 
@@ -84,7 +82,6 @@ Site.View = function( contentSelector ) {
 var Site = Site || {};
 
 Site.Controller = function( model ) {
-	'use strict';
 	var self = {};
 
 	// Imports
@@ -94,69 +91,38 @@ Site.Controller = function( model ) {
 	// Data
 	// ====
 	var KEY = {
-		VIEW: 'view-job'
+		VIEW: 'view-jobs',
+		JOBS_URL: '/data/jobs.json'
 	};
 
 	// Public
 	// ======
-	self.bindUiControls = function() {
-		self._bindViewControls();
+	self.viewJobs = function() {
+		model.fetchJobs( KEY.JOBS_URL );
 	};
 
-	self.viewJob = function( jobId ) {
-		var $viewControls = $( '[data-' + KEY.VIEW + ']' );
-
-		$viewControls.each(function() {
-			var curJobId = $( this ).data( KEY.VIEW );
-
-			if (curJobId === jobId ) {
-				var contentUrl = $( this ).attr( 'href' );
-				model.fetchJob( contentUrl );
-
-				if( !$( this ).parent.hasClass( 'active' ) ) {
-					$viewControls.parent.removeClass( 'active' );
-					$( this ).parent.addClass( 'active' );
-				}
-			}
-		});
-	};
-
-	// Helpers
-	// =======
-	self._bindViewControls = function() {
-		$( '[data-' + KEY.VIEW + ']' ).click( function( e ) {
-			e.preventDefault();
-
-			var jobId = $( this ).data( KEY.VIEW );
-			self.viewJob( jobId );
-		});
-	};
 
 };
 
 
 
-
-
-
-
-// Initialize
+// Main
 var Site = Site || {};
 
 Site.Jobs = function( args ) {
-	'use strict';
 	var self = {};
 
 	self.view        = new Site.View( args.containerSelector, args.tmplSelector );
 	self.model       = new Site.Model( self.view );
 	self.controller  = new Site.Controller( self.model );
 
-	// Compile job template
+	// Compile jobs template
 	self.view.compileTemplate( args.tmplSelector );
 
 	// Bind UI Controls
-	self.controller.bindUiControls();
+	//self.controller.bindUiControls();
 
-	// View job contents
-	self.controller.viewJob( args.initialJob );
+	// View jobs contents
+	self.controller.viewJobs();
 };
+

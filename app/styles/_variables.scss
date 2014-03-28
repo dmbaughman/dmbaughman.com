@@ -29,8 +29,8 @@ $brand-white:           #F2EEE7 !default;
 // Scaffolding
 // -------------------------
 
-$body-bg:               #fff !default;
-$text-color:            $gray-dark !default;
+$body-bg:               $gray-darker !default;
+$text-color:            $gray-lighter !default;
 
 // Links
 // -------------------------
@@ -40,6 +40,8 @@ $link-hover-color:      darken($link-color, 15%) !default;
 
 // Typography
 // -------------------------
+
+
 
 $font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
@@ -61,7 +63,7 @@ $line-height-base:        1.428571429 !default; // 20/14
 $line-height-computed:    floor($font-size-base * $line-height-base) !default; // ~20px
 
 $headings-font-family:    $font-family-base !default;
-$headings-font-weight:    500 !default;
+$headings-font-weight:    200 !default;
 $headings-line-height:    1.1 !default;
 $headings-color:          inherit !default;
 

@@ -13,9 +13,9 @@
     "noarg": true,
     "quotmark": "single",
     "undef": true,
-    "unused": true,
+    "unused": false,
     "strict": false,
-    "trailing": true,
+    "trailing": false,
     "smarttabs": true,
     "jquery": true
 }
